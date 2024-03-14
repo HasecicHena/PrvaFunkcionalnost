@@ -1,0 +1,180 @@
+<style>
+  .navigation-bar {
+    background-color: #e74d2b;
+    min-height: 27px;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .navigation-bar {
+      max-width: 100%;
+    }
+  }
+
+  .header-content {
+    align-self: center;
+    display: flex;
+    margin-top: 11px;
+    width: 100%;
+    max-width: 1305px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 24px;
+    color: #000;
+  }
+
+  @media (max-width: 991px) {
+    .header-content {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .museum-logo {
+    aspect-ratio: 1.08;
+    object-fit: auto;
+    object-position: center;
+    width: 68px;
+    align-self: stretch;
+  }
+
+  .museum-name {
+    color: #cf2323;
+    align-self: start;
+    margin-top: 18px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 36px Kodchasan, sans-serif;
+  }
+
+  .ticket-link,
+  .event-link,
+  .shop-link,
+  .purchase-link,
+  .vr-tour-link {
+    font-family: Kodchasan, sans-serif;
+    align-self: stretch;
+    margin: auto 0;
+  }
+
+  .welcome-banner {
+    aspect-ratio: 2.78;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+    margin-top: 11px;
+  }
+
+  @media (max-width: 991px) {
+    .welcome-banner {
+      max-width: 100%;
+    }
+  }
+
+  .information-container {
+    align-self: center;
+    display: flex;
+    margin-top: 16px;
+    width: 856px;
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 991px) {
+    .information-container {
+      flex-wrap: wrap;
+    }
+  }
+
+  .welcome-message {
+    font: 36px Kodchasan, sans-serif;
+  }
+
+  .hours-info,
+  .address-info {
+    font-family: Kodchasan, sans-serif;
+    display: flex;
+    margin-top: 32px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .hours-image,
+  .address-image {
+    aspect-ratio: 1.12;
+    object-fit: auto;
+    object-position: center;
+    width: 44px;
+  }
+  
+  .about-section,
+  .visit-section,
+  .practice-section {
+    font-family: Inter, sans-serif;
+    background-color: #ff2e00;
+    justify-content: center;
+    padding: 22px 60px;
+    color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    .about-section,
+    .visit-section,
+    .practice-section {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .hours-info,
+    .address-info {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+</style>
+
+<header class="navigation-bar"></header>
+<nav class="header-content">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/afdc54a0d5ca2228e9a8a195334cb3ab8f87fcc1b9bb52a0e4c75040f6411b0e?apiKey=bb4365c932ad4050a40a9c496878ecf4&" alt="Museum Logo" class="museum-logo" />
+  <div class="museum-name">Muzej <span style="color: rgba(207, 35, 35, 1)">Košarkaške Historije</span></div>
+  <div class="ticket-link">Karte</div>
+  <div class="event-link">Događaji</div>
+  <div class="shop-link">Shop</div>
+  <div class="purchase-link">Otkupnja</div>
+  <div class="vr-tour-link">VR Tura</div>
+</nav>
+<img src="https://cdn.builder.io/api/v1/image/assets/TEMP/943aaf43e846e0292fb829779f04f3faecd4c9a6481022554233155176321edd?apiKey=bb4365c932ad4050a40a9c496878ecf4&" alt="Welcome Banner" class="welcome-banner" />
+<section class="information-container">
+  <div class="welcome-message">Dobrodošli!</div>
+  <article class="hours-info">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a188765e8255fad943ef93b0a1f7a8a2840a8a76476279b14c05d558e76bc5aa?apiKey=bb4365c932ad4050a40a9c496878ecf4&" alt="Opening Hours" class="hours-image" />
+    <div>Otvoreni svaki dan 10:00h - 20:00h, osim 31.12.</div>
+  </article>
+  <article class="address-info">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2747e56dd5ca0f851de920825778bc86545803d0d4052f4f5ebd3a30dfb692d7?apiKey=bb4365c932ad4050a40a9c496878ecf4&" alt="Museum Address" class="address-image" />
+    <div>Adresa Muzeja</div>
+    <div>1400 Constitution Ave NW<br />Washington, DC 20560<br />Tel.: 648 702 229</div>
+  </article>
+</section>
+<footer>
+  <div class="about-section">O Nama</div>
+  <div class="visit-section">Posjeti nas</div>
+  <div class="practice-section">Praksa</div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Pronađite sliku unutar navigacionog menija
+    var userIcon = document.querySelector(".header-content img");
+    
+    // Dodajte event listener koji će se aktivirati na klik na ikonu korisnika
+    userIcon.addEventListener("click", function() {
+      // Preusmjerite korisnika na stranicu "prijavise.html" kada se klikne na ikonu korisnika
+      window.location.href = "prijavise.html";
+    });
+  });
+</script>
+
